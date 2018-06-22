@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86df6776-d001-4219-89bb-0e3b2916c85c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms/Employeeapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hrms/Employeeapp/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +43,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -120,7 +138,6 @@
         <option value="$PROJECT_DIR$/hrms/templates/employee/salary.html" />
         <option value="$PROJECT_DIR$/hrms/templates/employee/salaryview.html" />
         <option value="$PROJECT_DIR$/hrms/templates/employee/holidays_employee.html" />
-        <option value="$PROJECT_DIR$/hrms/Employeeapp/urls.py" />
         <option value="$PROJECT_DIR$/hrms/Employeeapp/views.py" />
         <option value="$PROJECT_DIR$/hrms/templates/employee/compose_employee.html" />
         <option value="$PROJECT_DIR$/hrms/templates/employee/mailview_employee.html" />
@@ -158,6 +175,7 @@
         <option value="$PROJECT_DIR$/hrms/templates/hr/addemployee.html" />
         <option value="$PROJECT_DIR$/hrms/hrmsapp/views.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/hrms/Employeeapp/urls.py" />
       </list>
     </option>
   </component>
@@ -180,6 +198,17 @@
             <path>
               <item name="hrmsproject (2)" type="b2602c69:ProjectViewProjectNode" />
               <item name="hrmsproject (2)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrmsproject (2)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrmsproject (2)" type="462c0819:PsiDirectoryNode" />
+              <item name="hrms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hrmsproject (2)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hrmsproject (2)" type="462c0819:PsiDirectoryNode" />
+              <item name="hrms" type="462c0819:PsiDirectoryNode" />
+              <item name="Employeeapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,13 +300,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hrms/templates/employee/base_employee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="96" lean-forward="true" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hrms/templates/employee/profile_employee.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -401,13 +423,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hrms/hrmsapp/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -552,6 +567,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hrms/Employeeapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
         </state>
       </provider>
     </entry>

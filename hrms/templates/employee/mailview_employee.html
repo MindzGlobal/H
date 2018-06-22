@@ -1,0 +1,60 @@
+{% extends 'employee/base_employee.html' %}
+{% block content %}
+
+<div class="content container-fluid">{% load staticfiles %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="page-title">View Message</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card-box">
+                <div class="mailview-content">
+                    <div class="mailview-header">
+                        <div class="text-ellipsis m-b-10"><span class="h3">HRMS Bootstrap Admin Template</span>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <a href="{% url 'leave_employee' %}" class="btn btn-default btn-sm btn-primary"> <i class="fa fa-reply"></i>Back </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sender-info">
+                            <div class="sender-img">
+                                <img width="40" alt="" src="{% static 'assets/img/user.jpg' %}" class="img-circle">
+                            </div>
+                            <div class="receiver-details pull-left">
+                                <span class="sender-name">John Doe (johnjoe@example.com)</span>
+                                <span class="receiver-name">
+                                    to
+                                    <span>me</span>, <span>Richard</span>, <span>Paul</span>
+                                </span>
+                            </div>
+                            <div class="pull-right">
+                                <span class="mail-time">18 Sep. 2017 9:42 AM</span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="mailview-inner">
+                        <p>Hello Richard,</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Thanks,<br>
+                        John Doe</p>
+                    </div>
+                </div>
+                <div class="mail-attachments">
+                </div>
+                <div class="mailview-footer">
+                    <div class="row">
+                        <div class="col-sm-6 left-action">
+                            <button type="button" class="btn btn-default btn-danger"><i class="fa fa-star starred"></i> Not Approved</button>
+                            <button type="button" class="btn btn-default btn-success"><i class="fa fa-star starred"></i> Approved</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

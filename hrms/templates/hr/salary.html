@@ -1,0 +1,515 @@
+{% extends 'hr/base.html' %}
+{% block content %}
+
+<div class="content container-fluid">
+					<div class="row">
+						<div class="col-xs-4">
+							<h4 class="page-title">Employee Salary</h4>
+						</div>
+						<div class="col-xs-8 text-right m-b-30">
+							<a href="#" class="btn btn-primary rounded pull-right" data-toggle="modal" data-target="#add_salary"><i class="fa fa-plus"></i> Add Salary</a>
+						</div>
+					</div>
+					<div class="row filter-row">
+					   <div class="col-sm-3 col-md-2 col-xs-6">
+							<div class="form-group form-focus">
+								<label class="control-label">Employee Name</label>
+								<input type="text" class="form-control floating" />
+							</div>
+					   </div>
+					   <div class="col-sm-3 col-md-2 col-xs-6">
+							<div class="form-group form-focus select-focus">
+								<label class="control-label">Role</label>
+								<select class="select floating">
+									<option value=""> -- Select -- </option>
+									<option value="">Employee</option>
+									<option value="1">Manager</option>
+								</select>
+							</div>
+					   </div>
+					   <div class="col-sm-3 col-md-2 col-xs-6">
+							<div class="form-group form-focus select-focus">
+								<label class="control-label">Leave Status</label>
+								<select class="select floating">
+									<option value=""> -- Select -- </option>
+									<option value="0"> Pending </option>
+									<option value="1"> Approved </option>
+									<option value="2"> Rejected </option>
+								</select>
+							</div>
+					   </div>
+					   <div class="col-sm-3 col-md-2 col-xs-6">
+							<div class="form-group form-focus">
+								<label class="control-label">From</label>
+								<div class="cal-icon"><input class="form-control floating datetimepicker" type="text"></div>
+							</div>
+						</div>
+					   <div class="col-sm-3 col-md-2 col-xs-6">
+							<div class="form-group form-focus">
+								<label class="control-label">To</label>
+								<div class="cal-icon"><input class="form-control floating datetimepicker" type="text"></div>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-2 col-xs-6">
+							<a href="#" class="btn btn-success btn-block"> Search </a>
+						</div>
+                    </div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table datatable">
+									<thead>
+										<tr>
+											<th style="width:30%;">Employee</th>
+											<th>Employee ID</th>
+											<th>Email</th>
+											<th>Joining Date</th>
+											<th>Role</th>
+											<th>Salary</th>
+											<th>Payslip</th>
+											<th class="text-right">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">J</a>
+												<h2><a href="{% url 'salary_emp' %}">John Doe <span>Web Designer</span></a></h2>
+											</td>
+											<td>FT-0001</td>
+											<td>johndoe@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Web Designer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$59698</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">R</a>
+												<h2><a href="{% url 'salary_emp' %}">Richard Miles <span>Web Developer</span></a></h2>
+											</td>
+											<td>FT-0002</td>
+											<td>richardmiles@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Web Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$72000</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">J</a>
+												<h2><a href="{% url 'salary_emp' %}">John Smith <span>Android Developer</span></a></h2>
+											</td>
+											<td>FT-0003</td>
+											<td>johnsmith@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Android Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$48200</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">M</a>
+												<h2><a href="{% url 'salary_emp' %}">Mike Litorus <span>IOS Developer</span></a></h2>
+											</td>
+											<td>FT-0004</td>
+											<td>mikelitorus@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">IOS Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$59698</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">W</a>
+												<h2><a href="{% url 'salary_emp' %}">Wilmer Deluna <span>Team Leader</span></a></h2>
+											</td>
+											<td>FT-0005</td>
+											<td>wilmerdeluna@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Team Leader <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$43000</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">J</a>
+												<h2><a href="{% url 'salary_emp' %}">Jeffrey Warden <span>Web Developer</span></a></h2>
+											</td>
+											<td>FT-0006</td>
+											<td>jeffreywarden@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Web Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$45000</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">B</a>
+												<h2><a href="{% url 'salary_emp' %}">Bernardo Galaviz <span>Web Developer</span></a></h2>
+											</td>
+											<td>FT-0007</td>
+											<td>bernardogalaviz@example.com</td>
+											<td>1 Jan 2014</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Web Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$38400</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">L</a>
+												<h2><a href="{% url 'salary_emp' %}">Lesley Grauer <span>Team Leader</span></a></h2>
+											</td>
+											<td>FT-0008</td>
+											<td>lesleygrauer@example.com</td>
+											<td>1 Jun 2015</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Team Leader <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$75500</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">J</a>
+												<h2><a href="{% url 'salary_emp' %}">Jeffery Lalor <span>Team Leader</span></a></h2>
+											</td>
+											<td>FT-0009</td>
+											<td>jefferylalor@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Team Leader <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$73550</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">L</a>
+												<h2><a href="{% url 'salary_emp' %}">Loren Gatlin <span>Android Developer</span></a></h2>
+											</td>
+											<td>FT-0010</td>
+											<td>lorengatlin@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Android Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$55000</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{% url 'salary_emp' %}" class="avatar">T</a>
+												<h2><a href="{% url 'salary_emp' %}">Tarah Shropshire <span>Android Developer</span></a></h2>
+											</td>
+											<td>FT-0011</td>
+											<td>tarahshropshire@example.com</td>
+											<td>1 Jan 2013</td>
+											<td>
+												<div class="dropdown">
+													<a class="btn btn-white btn-sm rounded dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Android Developer <i class="caret"></i></a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Software Engineer</a></li>
+														<li><a href="#">Software Tester</a></li>
+														<li><a href="#">Frontend Developer</a></li>
+														<li><a href="#">UI/UX Developer</a></li>
+													</ul>
+												</div>
+											</td>
+											<td>$92400</td>
+											<td><a class="btn btn-xs btn-primary" href="{% url 'salaryview' %}">Generate Slip</a></td>
+											<td class="text-right">
+												<div class="dropdown">
+													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+													<ul class="dropdown-menu pull-right">
+														<li><a href="#" data-toggle="modal" data-target="#edit_salary" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+														<li><a href="#" data-toggle="modal" data-target="#delete_salary" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+
+			<div id="add_salary" class="modal custom-modal fade" role="dialog">
+				<div class="modal-dialog">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-content modal-lg">
+						<div class="modal-header">
+							<h4 class="modal-title">Add Staff Salary</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="row">
+
+									<div class="col-md-6">
+										<label>Basic Salary</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<h4 class="text-primary"></h4>
+										<div class="form-group">
+											<label>House Rent Allowance (H.R.A.)</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Conveyance</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>PF Employer</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Conveyance</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Performance Allowance</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Arrears</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Others</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Incentives</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Total Earnings</label>
+											<input class="form-control" type="text">
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<h4 class="text-primary">Deductions</h4>
+										<div class="form-group">
+											<label>Provident Fund(PF) Employer</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Provident Fund(PF) Employee</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Professional Tax</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Advance</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Income Tax Ded</label>
+											<input class="form-control" type="text">
+										</div>
+										<div class="form-group">
+											<label>Total Deductions</label>
+											<input class="form-control" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="m-t-20 text-center">
+									<button class="btn btn-primary">Create Salary</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+{% endblock %}

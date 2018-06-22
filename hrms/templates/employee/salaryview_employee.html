@@ -1,0 +1,152 @@
+{% extends 'employee/base_employee.html' %}
+{% block content %}
+<div class="content container-fluid">{% load staticfiles %}
+					<div class="row">
+						<div class="col-xs-8">
+							<h4 class="page-title">Payslip</h4>
+						</div>
+						<div class="col-sm-4 text-right m-b-30">
+							<div class="btn-group btn-group-sm">
+								<a href="" class="btn btn-default btn-primary" download><i class="fa fa-print fa-lg"></i> Print</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card-box">
+								<div class="row">
+									<div class="col-md-6 m-b-20">
+										<img src="{% static 'assets/img/logo.png' %}" class="m-b-20" alt="">
+									</div>
+									<div class="col-md-6 m-b-20">
+										<div class="invoice-details">
+											<h3 class="text-uppercase">Payslip #49029</h3>
+											<ul class="list-unstyled">
+												<li>Salary Month: <span>September, 2017</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-bordered custom-table m-b-0 datatable">
+									<tbody>
+									<thead>
+										<th colspan="12" class="text-center"><h4 class="m-b-10"><strong>PAYSLIP FOR THE MONTH OF SEPTEMBER 2017</strong></h4></th>
+									</thead>
+										<tr>
+											<td>Employee Name:</td>
+											<td>John Doe</td>
+											<td>Employee ID:</td>
+											<td>SM0050</td>
+										</tr>
+										<tr>
+											<td>Designation:</td>
+											<td>Web Developer</td>
+											<td>No Of Working Days:</td>
+											<td>25</td>
+										</tr>
+										<tr>
+											<td>Date Of Joining:</td>
+											<td>25/11/16</td>
+											<td>No Of Paid Days:</td>
+											<td>24</td>
+										</tr>
+										<tr>
+											<td>Bank:</td>
+											<td>ICICI</td>
+											<td>CTC:</td>
+											<td>20000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+								<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-bordered custom-table m-b-0 datatable">
+									<tbody>
+										<thead>
+											<th colspan="2"><h4 class="m-b-10"><strong>Earnings</strong></h4></th>
+											<th colspan="2"><h4 class="m-b-10"><strong>Deductions</strong></h4></th>
+										</thead>
+										<tr>
+											<td><strong>Basic Salary</strong></td>
+											<td>7833</td>
+											<td><strong>Provident Fund(PF) Employer</strong></td>
+											<td>940</td>
+										</tr>
+										<tr>
+											<td><strong>House Rent Allowance (H.R.A.)</strong></td>
+											<td>3133</td>
+											<td><strong>Provident Fund(PF) Employee</strong></td>
+											<td>940</td>
+										</tr>
+										<tr>
+											<td><strong>Conveyance</strong></td>
+											<td>1567</td>
+											<td><strong>Professional Tax:</strong></td>
+											<td>200</td>
+										</tr>
+										<tr>
+											<td><strong>PF Employer</strong></td>
+											<td>940</td>
+											<td><strong>Advance:</strong></td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td><strong>Performance Allowance</strong></td>
+											<td>6110</td>
+											<td><strong>Income Tax Ded:</strong></td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td><strong>Arrears</strong></td>
+											<td>-</td>
+											<td><strong></strong></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><strong>Others</strong></td>
+											<td>-</td>
+											<td><strong></strong></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><strong>Incentives</strong></td>
+											<td>-</td>
+											<td><strong></strong></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><strong>Total Earnings</strong></td>
+											<td>19583</td>
+											<td><strong>Total Deductions:</strong></td>
+											<td>2080</td>
+										</tr>
+									<tr>
+										<td colspan="12"><strong>Net Salary: 17503</strong>(Seventeen thousand five hundred and three only.)
+									</td></tr>
+									</tbody>
+								</table>
+								<br>
+								<div class="col-md-12">
+										<strong>NOTE:</strong>
+										<p>1)Others will be deducted as applicable</p>
+										<p>2)Deduction may be due to Attandance Policy or unapproved leaves, the same will be on tha basis on absent and reporting time</p>
+										<p>3)Deductions can be applied due to lack of performance.</p>
+										<strong class="pull-right">Authorized Signature</strong>
+										<br><br>
+										<p class="text-danger">*This is computer generated report hence signature is not required</p>
+									</div>
+							</div>
+						</div>
+					</div>
+							</div>
+						</div>
+					</div>
+                </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+        <title>ZRMindzGlobal HRMS</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/multi-select.css' %}" >
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap-taginput.css' %}" >
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/morris/morris.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/summernote/dist/summernote.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/dataTables.bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap-datetimepicker.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/select2.min.css' %}">
+	    <script src="{% static 'assets/js/html5shiv.min.js' %}"></script>
+	    <script src="{% static 'assets/js/respond.min.js' %}"></script>
+	<style>
+		@media (min-width: 768px)
+    .footer {
+        left: 220px;
+    }
+	.footer{
+		background: #fff;
+		padding: 20px 30px;
+		/* align-items: center!important; */
+		color: #58666e;
+		bottom: 0;
+		position: relative;
+	}
+	</style>
+</head>
+    <body>
+        <div class="main-wrapper">
+			{% include 'common/header_manager.html' %}
+			{% include 'common/sidebar_manager.html' %}
+
+            <div class="page-wrapper">
+				{% block content %}
+
+					{% endblock %}
+			</div> <!--end of pagewrapper-->
+
+			<footer class="footer text-center"> 2018 © By ZRMindzGlobal  </footer>
+        </div> <!--end of mainwrapper-->
+		<div class="sidebar-overlay" data-reff="#sidebar"></div>
+        <script type="text/javascript" src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.slimscroll.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/plugins/morris/morris.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/plugins/raphael/raphael-min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/app.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.dataTables.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/dataTables.bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/select2.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/moment.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/bootstrap-datetimepicker.min.js' %}"></script>
+	    {% block javascript %}
+		{% endblock %}
+    </body>
+</html>

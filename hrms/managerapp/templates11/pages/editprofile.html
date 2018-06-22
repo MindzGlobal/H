@@ -1,0 +1,538 @@
+{% extends 'pages/base.html' %}
+		{% block content %}
+<style>
+    input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+    width: 25px;
+    height: 20px;
+    }
+</style>
+
+<div class="content container-fluid">{% load staticfiles %}
+					<div class="row">
+						<div class="col-sm-8">
+							<h4 class="page-title">Edit Profile</h4>
+						</div>
+					</div>
+					<form>
+
+						<div class="card-box">
+							<h3 class="card-title">Basic Informations</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="profile-img-wrap">
+										<img class="inline-block" src="{% static 'assets/img/user.jpg' %}" alt="user">
+										<div class="fileupload btn btn-default">
+											<span class="btn-text">edit</span>
+											<input class="upload" type="file">
+										</div>
+									</div>
+									<div class="profile-basic">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group form-focus">
+													<label class="control-label">Employee ID</label>
+													<input type="text" class="form-control floating" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group form-focus">
+													<label class="control-label">First Name</label>
+													<input type="text" class="form-control floating" />
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group form-focus">
+													<label class="control-label">Last Name</label>
+													<input type="text" class="form-control floating" />
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-box">
+							<h3 class="card-title">Address Informations</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-focus">
+										<label class="control-label">Address</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Postal Address</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">State</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">City</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Pin Code</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+							<div class="card-box">
+							<h3 class="card-title">Reporting</h3>
+							<div class="row">
+								<div class="col-md-6">
+												<div class="form-group form-focus select-focus">
+													<label class="control-label">Reporting Person</label>
+													<select class="select form-control floating">
+														<option value="">Select Gendar</option>
+														<option value="">Male</option>
+														<option value="">Female</option>
+													</select>
+												</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Reporting Person Designation</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+								<div class="col-md-6">
+												<div class="form-group form-focus select-focus">
+													<label class="control-label">Reporting Person</label>
+													<select class="select form-control floating">
+														<option value="">Select Gendar</option>
+														<option value="">Male</option>
+														<option value="">Female</option>
+													</select>
+												</div>
+
+							</div>
+						</div>
+							</div>
+
+
+
+						<div class="card-box">
+							<h3 class="card-title">Compensation</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Gross Salary </label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Net Take Home</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Employee PF</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Tax</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="card-box">
+							<h3 class="card-title">Emergency Contact Person</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Person Name</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Relation</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Person Contact No.</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Occupation</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="card-box">
+							<h3 class="card-title">Personal Information</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-focus">
+										<label class="control-label">Name</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+									<div class="col-md-6">
+												<div class="form-group form-focus select-focus">
+													<label class="control-label">Gendar</label>
+													<select class="select form-control floating">
+														<option value="">Select Gendar</option>
+														<option value="">Male</option>
+														<option value="">Female</option>
+													</select>
+												</div>
+
+											</div>
+
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Father's Name</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Designation</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Official Email</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">PAN</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+												<div class="form-group form-focus">
+													<label class="control-label">Date of Birth </label>
+													<div class="cal-icon"><input class="form-control floating datetimepicker" type="text"></div>
+												</div>
+											</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Date of Joining</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Contact No.</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+									<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Personal Email</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Blood Group</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+
+
+							</div>
+						</div>
+
+                        <div class="card-box">
+							<h3 class="card-title">Educational Information</h3>
+							<div class="row">
+                                <div class="col-md-4"><h4>10th</h4>
+									<div class="form-group form-focus">
+										<label class="control-label">Passing Year</label>
+										<input type="text" class="form-control floating" />
+									</div>
+
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Marks</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Board</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Subject</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+                            </div>
+
+                                	<div class="col-md-4"><h4>12th</h4>
+									<div class="form-group form-focus">
+										<label class="control-label">Passing Year</label>
+										<input type="text" class="form-control floating" />
+									</div>
+
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Marks</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Board</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Subject</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+                            </div>
+
+                                <div class="col-md-4"><h4>Graduation</h4>
+									<div class="form-group form-focus">
+										<label class="control-label">Passing Year</label>
+										<input type="text" class="form-control floating" />
+									</div>
+
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Marks</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">University</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="">
+									<div class="form-group form-focus">
+										<label class="control-label">Branch</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+                            </div>
+
+							</div>
+							<div class="input-group form-focus m-t-20 m-b-30">
+			  <input type="text" value="Html,Css" data-role="tagsinput" placeholder="Add Skills" > </div>
+		  <div class="add m-t-10"></div>
+		   <br>
+   			<a id="clonebtn" class="btn btn-success">Other Educational Details</a>
+						</div>
+
+                        <div class="card-box">
+							<h3 class="card-title">Experience</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Organization</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Designation</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Period From</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group form-focus">
+										<label class="control-label">Period To</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+                                <div class="col-md-12">
+									<div class="form-group form-focus">
+										<label class="control-label">Reasion For Leaving</label>
+										<input type="text" class="form-control floating" />
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+                         <div class="card-box">
+							<h3 class="card-title">Documents</h3>
+							<div class="row">
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Resume</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">10th Marksheet</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">12th Marksheet</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Degree</h5>
+									</div>
+								</div>
+                                <div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Experience Latter</h5>
+									</div>
+								</div>
+
+							</div>
+
+
+                             <h3 class="card-title">Payslips</h3>
+                             <div class="row">
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Payslip 1</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Payslip 2</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Payslip 3</h5>
+									</div>
+								</div>
+
+							</div>
+
+                             <h3 class="card-title">ID</h3>
+                             <div class="row">
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Pan Card</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">Adhaar Card</h5>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group form-focus">
+										<input type="checkbox" class="checkmail">&nbsp<h5 class="">ID Card</h5>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="text-center m-t-20">
+							<button class="btn btn-primary btn-lg" type="button">Save &amp; update</button>
+						</div>
+					</form>
+				</div>
+ <!--add more section-->
+	   <div class="hidden" id="addmore">
+		   <div class="row">
+			   <div class="col-md-12 card-box">
+               <h4>Other Details</h4>
+				   <a class="btn btn-danger removebtn" style="display:none;margin-top: -30px;float: right;" onclick="divRemove(this.id);"><i class="fa fa-times"></i></a>
+               <br>
+				   <div class="form-group form-focus">
+                  <label class="control-label">Passing Year</label>
+                  <input type="text" class="form-control floating" />
+               </div>
+               <div class="">
+                  <div class="form-group form-focus">
+                     <label class="control-label">Marks</label>
+                     <input type="text" class="form-control floating" />
+                  </div>
+               </div>
+               <div class="">
+                  <div class="form-group form-focus">
+                     <label class="control-label">University</label>
+                     <input type="text" class="form-control floating" />
+                  </div>
+               </div>
+               <div class="">
+                  <div class="form-group form-focus">
+                     <label class="control-label">Branch</label>
+                     <input type="text" class="form-control floating" />
+                  </div>
+               </div>
+            </div>
+		   </div>
+	   </div>
+		<!--add more section-->
+
+{% endblock %}
+{% block javascript %}
+		<script type="text/javascript" src="{% static 'assets/js/jquery.multi-select.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/bootstrap-tagsinput.min.js' %}"></script>
+<script>
+		   var cloneCount = 1;
+		   $("#clonebtn").click(function(){
+			   var cnt=cloneCount++;
+			   $("#addmore").clone()
+			   .attr('id', 'clone_'+ cnt)
+			   .appendTo(".add");
+			   $("#clone_"+cnt+" .removebtn").attr('id', 're'+cnt).show();
+			   $("#clone_"+cnt).removeClass('hidden');
+		   });
+
+		  function divRemove(value){
+		   $('#'+value).parent().remove();
+		  }
+ </script>
+{% endblock %}

@@ -17,7 +17,4 @@ urlpatterns = [
     url(r'^leavesRequest_employee$', views.leave_employee, name='leave_employee'),
     url(r'^mailview_employee$', views.mailview_employee, name='mailview_employee'),
 
-    url(r'^changepwd_employee', views.changepwd_employee, name='changepwd_employee'),
-    url(r'^leavesRequest_employee$', views.leave_employee, name='leave_employee'),
-    url(r'^mailview_employee$', views.mailview_employee, name='mailview_employee'),
 ]
